@@ -19,7 +19,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-        <a class="navbar-brand" href="<%= root_url %>"/>Home</a>
+        <a class="navbar-brand" href="<%= users_path %>"/>Home</a>
+        <% if logged_in? %>
+          <a class="navbar-brand" href="<%= logout_path method: :delete %>"/>Logout</a>
+        <% else %>
+          <a class="navbar-brand" href="<%= sessions_new_path %>"/>Login</a>
+        <% end %>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">

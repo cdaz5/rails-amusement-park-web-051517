@@ -1,0 +1,11 @@
+<h1>Hi, <%= @user.name %> </h1>
+<p>Name: <%= @user.name %></p>
+<p>Nausea Level: <%= @user.nausea %></p>
+<p>Happiness Level: <%= @user.happiness %></p>
+<p>Tickets: <%= @user.tickets %></p>
+<p>Height: <%= @user.height %></P>
+  <% if @user.admin %>
+  <p> <font color="red">Admin</font> </p>
+  <% end %>
+
+  <%= link_to "edit", edit_user_path %>

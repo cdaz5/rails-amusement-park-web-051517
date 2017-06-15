@@ -1,0 +1,16 @@
+<h1>Edit <%= @user.name %> </h1>
+<%= form_for(@user) do |t| %>
+<%= t.label :name, "Name:" %>
+<%= t.text_field :name %><br>
+<%= t.label :nausea, "Nausea Level:" %>
+<%= t.number_field :nausea  %><br>
+<%= t.label :happiness, "Happiness Level:" %>
+<%= t.number_field :happiness %><br>
+<%= t.label :tickets, "Tickets" %>
+<%= t.number_field :tickets %><br>
+<%= t.label :height, "Height" %>
+<%= t.number_field :height %><br>
+
+<%= t.submit "Update" %>
+
+<% end %>

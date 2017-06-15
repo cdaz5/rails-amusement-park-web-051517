@@ -1,0 +1,16 @@
+<h1>Edit <%= @attraction.name %> </h1>
+<%= form_for(@attraction) do |t| %>
+<%= t.label :name, "Name:" %>
+<%= t.text_field :name %><br>
+<%= t.label :nausea_rating, "Nausea Rating:" %>
+<%= t.number_field :nausea_rating  %><br>
+<%= t.label :happiness_rating, "Happiness Rating:" %>
+<%= t.number_field :happiness_rating %><br>
+<%= t.label :tickets, "Tickets" %>
+<%= t.number_field :tickets %><br>
+<%= t.label :min_height, "Height" %>
+<%= t.number_field :min_height %><br>
+
+<%= t.submit "Update" %>
+
+<% end %>

@@ -1,0 +1,14 @@
+<h2>Sign Up</h2>
+ <%= form_for(@user) do |f| %>
+   <%= f.text_field :name, placeholder: "Enter Name" %><br><br>
+   <%= f.password_field :password, placeholder: "Enter Password" %><br><br>
+   <%= f.password_field :password_confirmation, placeholder: "Re-Enter Password" %><br><br>
+   <%= f.number_field :height, placeholder: "Enter Height"%><br><br>
+   <%= f.number_field :happiness, placeholder: "Enter happiness Level"%><br><br>
+   <%= f.number_field :nausea, placeholder: "Enter Nausea Level"%><br><br>
+   <%= f.number_field :tickets, placeholder: "Enter Number of Tixs"%><br><br>
+   <p>Admin? <%= f.radio_button :admin, true %></p>
+
+   <br><br>
+   <%= f.submit "Signup" %>
+ <% end %>
