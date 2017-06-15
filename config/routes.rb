@@ -2,12 +2,12 @@ Rails.application.routes.draw do
 
   get 'sessions/new'
 
-  get 'sessions/create'
+  post 'sessions/create', to: 'sessions#create'
 
   delete '/logout' => 'sessions#destroy', as: 'logout'
 
   get '/logout' => 'sessions#destroy'
-  
+
   get 'users/signup', to: 'users#new', as: 'user/signup'
   resources :users, only: [:index, :show, :update, :destroy, :edit, :create]
   resources :attractions
