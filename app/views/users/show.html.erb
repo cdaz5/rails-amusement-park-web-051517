@@ -8,4 +8,11 @@
   <p> <font color="red">Admin</font> </p>
   <% end %>
 
-  <%= link_to "edit", edit_user_path %>
+  <h1>Your Rides</h1>
+  <% @user.rides.each do |ride| %>
+
+  <p><%= ride.attraction.name %> </p>
+  <% end %>
+
+  <%= link_to "edit", edit_user_path %><br>
+  <%= link_to "attractions", attractions_path %>

@@ -20,6 +20,7 @@
             <span class="icon-bar"></span>
           </button>
         <a class="navbar-brand" href="<%= users_path %>"/>Home</a>
+        <a class="navbar-brand" href="<%= attractions_path %>"/>Attractions</a>
         <% if logged_in? %>
           <a class="navbar-brand" href="<%= logout_path method: :delete %>"/>Logout</a>
         <% else %>
