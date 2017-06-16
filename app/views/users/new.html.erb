@@ -1,14 +1,18 @@
 <h2>Sign Up</h2>
  <%= form_for(@user) do |f| %>
-   <%= f.text_field :name, placeholder: "Enter Name" %><br><br>
-   <%= f.password_field :password, placeholder: "Enter Password" %><br><br>
-   <%# f.password_field :password_confirmation, placeholder: "Re-Enter Password" %><br><br>
-   <%= f.number_field :height, placeholder: "Enter Height"%><br><br>
-   <%= f.number_field :happiness, placeholder: "Enter happiness Level"%><br><br>
-   <%= f.number_field :nausea, placeholder: "Enter Nausea Level"%><br><br>
-   <%= f.number_field :tickets, placeholder: "Enter Number of Tixs"%><br><br>
-   <p>Admin? <%= f.radio_button :admin, true %></p>
-
-   <br><br>
-   <%= f.submit  %>
+  <%= f.label :name %>
+  <%= f.text_field :name %><br><br>
+  <%= f.label :password %>
+  <%= f.password_field :password %><br><br>
+  <%= f.label :height %>
+  <%= f.number_field :height %><br><br>
+  <%= f.label :happiness %>
+  <%= f.number_field :happiness %><br><br>
+  <%= f.label :nausea %>
+  <%= f.number_field :nausea %><br><br>
+  <%= f.label :tickets %>
+  <%= f.number_field :tickets %> <br><br>
+  <%= f.label :ADMIN %>
+  <%= f.check_box :admin %><br><br>
+  <%= f.submit  %>
  <% end %>

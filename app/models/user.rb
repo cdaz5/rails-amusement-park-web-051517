@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
       "sad"
     elsif self.happiness > self.nausea
       "happy"
-    else "are you even a human?"
+    else
     end
   end
 end

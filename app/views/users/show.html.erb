@@ -10,9 +10,12 @@
 
   <h1>Your Rides</h1>
   <% @user.rides.each do |ride| %>
+<ul>
+  <li> <%= ride.attraction.name %> </li>
+</ul>
+<% end %>
 
-  <p><%= ride.attraction.name %> </p>
-  <% end %>
-
-
+  <% if flash[:notice] %>
+   <%= flash[:notice] %>
+   <% end %><br>
   <%= link_to "attractions", attractions_path %>

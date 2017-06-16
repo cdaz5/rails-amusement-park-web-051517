@@ -6,7 +6,6 @@ class SessionsController < ApplicationController
   end
 
   def new
-    @user = User.new
   end
 
   def create
@@ -21,7 +20,7 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to sessions_new_path
+    redirect_to signin_path
   end
 
 

@@ -1,10 +1,8 @@
-<h1>login</h1>
-<%= form_tag({controller: 'sessions', action: 'create', method: 'post'}) do %>
-<%= label_tag :name, "Enter Name:" %>
-<%= text_field_tag :name %><br>
-<%= label_tag :password, "Enter Password:" %>
-<%= password_field_tag :password %><br>
-<%= label_tag :password_confirmation, "Re-enter password" %>
-<%= password_field_tag :password_confirmation %><br>
-<%= submit_tag "login" %>
+<h1>Sign In</h1>
+<%= form_tag sessions_path do %>
+<%= label_tag :name %>
+<%= text_field_tag 'user[:name]' %><br>
+<%= label_tag :password %>
+<%= password_field_tag 'user[:password]' %><br>
+<%= submit_tag "Sign In" %>
 <% end %>
