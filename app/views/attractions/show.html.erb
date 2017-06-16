@@ -4,4 +4,6 @@
 <p>Happiness Rating: <%= @attraction.happiness_rating %></p>
 <p>Nausea Rating: <%= @attraction.nausea_rating %></p>
 
-<%= link_to "Edit", edit_attraction_path(@attraction) %>
+<%= link_to "Edit", edit_attraction_path(@attraction) %><br>
+
+<%= button_to "take ride", ride_path(:id => @attraction.id), method: :post %>

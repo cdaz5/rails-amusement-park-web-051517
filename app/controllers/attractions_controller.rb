@@ -1,5 +1,5 @@
 class AttractionsController < ApplicationController
-  before_action :authentication_required, except: [:index, :show]
+  before_action :authentication_required, except: [ :show]
   def index
     @attractions = Attraction.all
   end

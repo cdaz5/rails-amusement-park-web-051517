@@ -1,16 +1,17 @@
 Rails.application.routes.draw do
-
+  get "/" => "sessions#index"
   get 'sessions/new'
-
   post 'sessions/create', to: 'sessions#create'
 
   delete '/logout' => 'sessions#destroy', as: 'logout'
 
   get '/logout' => 'sessions#destroy'
 
-  get 'users/signup', to: 'users#new', as: 'user/signup'
+  get '/users/new' => 'users#new', as: 'signup'
   resources :users, only: [:index, :show, :update, :destroy, :edit, :create]
   resources :attractions
+
+  post 'rides/create' => 'rides#create', as: 'ride'
   # get 'attractions/index'
   #
   # get 'attractions/new'

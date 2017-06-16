@@ -1,6 +1,10 @@
 class SessionsController < ApplicationController
 
-  before_action :authentication_required, except: [:new, :create]
+  before_action :authentication_required, except: [:new, :index, :create]
+
+  def index
+  end
+
   def new
     @user = User.new
   end
