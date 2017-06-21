@@ -22,6 +22,7 @@
         <a class="navbar-brand" href="<%= root_path %>"/>Home</a>
         <a class="navbar-brand" href="<%= attractions_path %>"/>Attractions</a>
         <% if logged_in? %>
+          <a class="navbar-brand" href="<%= user_path(current_user) %>"/>Profile Page</a>
           <a class="navbar-brand" href="<%= logout_path method: :delete %>"/>Logout</a>
         <% else %>
           <a class="navbar-brand" href="<%= signin_path %>"/>Login</a>
@@ -39,6 +40,5 @@
     <div class="container"  role="main">
       <%= yield %>
     </div>
-
   </body>
 </html>

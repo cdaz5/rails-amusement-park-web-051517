@@ -1,5 +1,10 @@
-<h1>Hi, <%= @user.name %> </h1>
+<h1>
+  <%= gravatar_for @user %>
+  Hi, <%= @user.name %>
+</h1>
+<p><%= link_to 'Add', 'https://en.gravatar.com/' %> profile picture.</p><br>
 <p>Name: <%= @user.name %></p>
+<p>Email: <%= @user.email %> </p>
 <p>Mood: <%= @user.mood %></p>
 <p>Tickets: <%= @user.tickets %></p>
 <p>Height: <%= @user.height %></P>

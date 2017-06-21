@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140703140419) do
+ActiveRecord::Schema.define(version: 20170616160557) do
 
   create_table "attractions", force: :cascade do |t|
     t.string  "name"
@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(version: 20140703140419) do
     t.integer "tickets"
     t.integer "height"
     t.boolean "admin",           default: false
+    t.string  "email"
+    t.string  "remember_digest"
   end
 
 end

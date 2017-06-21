@@ -2,6 +2,10 @@
 <%= form_for(@user) do |t| %>
 <%= t.label :name %>
 <%= t.text_field :name %><br>
+<%= t.label :email %>
+<%= t.email_field :email %><br>
+<%= t.label :password %>
+<%= t.password_field :password %><br>
 <%= t.label :nausea %>
 <%= t.number_field :nausea  %><br>
 <%= t.label :happiness %>
